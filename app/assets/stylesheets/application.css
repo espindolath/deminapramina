@@ -27,3 +27,10 @@ body {
 	display: inline-block;
 }
 
+h1 {
+    color: crimson; font-size: 3em; font-family: "calibri"; margin-left: 1em;
+}
+
+.label {
+    color: black; font-family: "calibri"; 
+}

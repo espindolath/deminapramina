@@ -11,7 +11,11 @@ class ProjetosController < ApplicationController
 
   def create
     @projeto = Projeto.new(projeto_params)
-    @projeto.save
+    if @projeto.save
+       redirect_to new_projeto_path, flash: {notice: "Você conseguiu! Obrigada :D" }
+    else
+       render :new
+    end
   end
 
   def show
