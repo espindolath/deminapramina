@@ -45,6 +45,13 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+# Para fazer deploy no Heroku precisa da linha `gem 'pg', group: :production`
+# Porém, ao adicionar essa linha pode dar problema para fazer funcionar na
+# máquina local de vocês. Para corrigir, precisa instalar o banco de dados
+# Postgres: https://www.postgresql.org/download/
+# Depois executar bundle install
+# Outra alternativa para funcionar localmente, é comentar a linha debaixo
+# adicionando # e executar bundle install no terminal para mexer.
 gem 'pg', group: :production
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
