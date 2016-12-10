@@ -13,12 +13,16 @@ class ProjetosController < ApplicationController
     @projeto = Projeto.new(projeto_params)
     @projeto.save
   end
+
+  def show
+    @projeto = Projeto.find(params[:id])
+  end
     
   private
     
   def projeto_params
     params
       .require(:projeto)
-      .permit(:nome, :descricao, :contato, :organizador, :foto)
+      .permit(:id, :nome, :descricao, :contato, :organizador, :foto)
   end
 end
