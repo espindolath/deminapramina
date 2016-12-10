@@ -2,21 +2,26 @@
 <%= form_for @projeto, url: {action: "create"} do |f| %>
     <p>
         <%= f.label :nome %> 
-        <%= f.text_field :nome %>
+        <%= f.text_field :nome %> 
+        <%= @projeto.errors[:nome].join(', ') %>
     </p>
         <%= f.label :descricao %> 
         <%= f.text_field :descricao %>
+        <%= @projeto.errors[:descricao].join(', ') %>
     <p> 
         <%= f.label :contato %> 
         <%= f.text_field :contato %>
+        <%= @projeto.errors[:contato].join(', ') %>
     </p>
     <p>
         <%= f.label :organizador %>
         <%= f.text_field :organizador %>
+        <%= @projeto.errors[:organizador].join(', ') %>
     </p>
     <p> 
         <%= f.label :foto %>
         <%= f.text_field :foto %>
+        <%= @projeto.errors[:foto].join(', ') %>
     </p>
     
 
