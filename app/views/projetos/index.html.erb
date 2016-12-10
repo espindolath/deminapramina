@@ -1,0 +1,11 @@
+<section class="projetos">
+	<h1><%= image_tag "deminapramina-cut.png" %></h1>
+	<p>pensar num texto fofo</p>
+	<% @projetos.each do |projeto|%>
+		<div class="item">
+			<h2><%= projeto.nome %></h2>
+			<img src="<%= projeto.foto %>">
+			<%= link_to "Saiba mais", projeto_path(projeto.id) %>
+		</div>
+	<% end %>
+</section>
