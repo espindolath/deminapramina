@@ -1,0 +1,24 @@
+<h1>cadastro de mina pra mina </h1> 
+<%= form_for @projeto, url: {action: "create"} do |f| %>
+    <p>
+        <%= f.label :nome %> 
+        <%= f.text_field :nome %>
+    </p>
+        <%= f.label :descricao %> 
+        <%= f.text_field :descricao %>
+    <p> 
+        <%= f.label :contato %> 
+        <%= f.text_field :contato %>
+    </p>
+    <p>
+        <%= f.label :organizador %>
+        <%= f.text_field :organizador %>
+    </p>
+    <p> 
+        <%= f.label :foto %>
+        <%= f.text_field :foto %>
+    </p>
+    
+
+  <%= f.submit "Create" %>
+<% end %>
